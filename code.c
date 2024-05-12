@@ -1,10 +1,11 @@
-#include <linux/kernel.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <semaphore.h>
-#include<sys/syscall.h>
+#include <sys/types.h>
+#include <sys/syscall.h>
+
 #define N 5 // Number of philosophers
 
 sem_t chopstick[N];
@@ -40,7 +41,7 @@ void *eat_think_repeat(void *arg) {
 }
 
 int main() {
-syscall(333);
+    syscall(333);
     int i;
     int philosopher_id[N];
 
@@ -68,5 +69,6 @@ syscall(333);
 
     return 0;
 }
+
 
 
