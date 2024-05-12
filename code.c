@@ -41,7 +41,7 @@ void *eat_think_repeat(void *arg) {
 }
 
 int main() {
-    syscall(333);
+    syscall(335);
     int i;
     int philosopher_id[N];
 
